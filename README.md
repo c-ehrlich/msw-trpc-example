@@ -5,6 +5,8 @@ This is a stock Create T3 App, other than:
 - `vitest.config.ts`
 - `src/__test__`
 
+
+To get started:
 ```
 pnpm i
 pnpm test
