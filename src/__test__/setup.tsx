@@ -6,6 +6,7 @@ import { type ReactElement } from "react";
 import superjson from "superjson";
 import { type AppRouter } from "~/server/api/root";
 import "@testing-library/jest-dom";
+import fetch from "cross-fetch";
 
 const mockedTRPC = createTRPCReact<AppRouter>({
   unstable_overrides: {
