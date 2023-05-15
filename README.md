@@ -10,3 +10,8 @@ To get started:
 pnpm i
 pnpm test
 ```
+
+todo:
+- remove as much stuff as possible so the repo is easier to understand
+
+PRs welcome. Open an issue first if you're not sure, or contact me on twitter/discord/etc.
