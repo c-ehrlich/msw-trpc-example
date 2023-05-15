@@ -11,6 +11,9 @@ pnpm i
 pnpm test
 ```
 
+resources:
+- [msw-trpc](https://github.com/maloguertin/msw-trpc)
+
 todo:
 - remove as much stuff as possible so the repo is easier to understand
 
