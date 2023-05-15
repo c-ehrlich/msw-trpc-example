@@ -13,7 +13,6 @@ describe("Greeting", () => {
   const server = setupServer(
     trpcMsw.example.hello.query((req, res, ctx) => {
       const input = req.getInput();
-      console.log("---request:", req);
       return res(
         ctx.status(200),
         ctx.data({
