@@ -21,5 +21,6 @@ resources:
 
 TODO: 
 - some imports are not using `~` because vitest couldn't traverse the import alias for some reason. fix this.
+- some sort of setup (for example dependabot, github actions, etc) to update dependencies and check in CI that everything still works.
 
 PRs welcome. Open an issue first if you're not sure, or contact me on twitter/discord/etc.
