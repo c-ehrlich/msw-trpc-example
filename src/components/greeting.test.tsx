@@ -1,13 +1,8 @@
-import { api } from "../utils/api";
-import { renderWithProviders, trpcMsw } from "./setup";
 import { screen, waitFor } from "@testing-library/react";
 import { setupServer } from "msw/node";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-
-function Greeting() {
-  const query = api.example.hello.useQuery({ text: "foo" });
-  return <div>{query.data?.greeting ?? "Loading..."}</div>;
-}
+import { Greeting } from "./greeting";
+import { renderWithProviders, trpcMsw } from "../__test__/setup";
 
 describe("Greeting", () => {
   const server = setupServer(
@@ -29,7 +24,7 @@ describe("Greeting", () => {
     renderWithProviders(<Greeting />);
     expect(screen.getByText(/Loading/i)).toBeInTheDocument();
     await waitFor(() => {
-      const greeting = screen.getByText(/foo/i);
+      const greeting = screen.getByText(/Hello from tRPC/i);
       expect(greeting).toBeVisible();
     });
   });

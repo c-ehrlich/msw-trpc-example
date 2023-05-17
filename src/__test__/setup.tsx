@@ -4,7 +4,7 @@ import { createTRPCReact, httpLink } from "@trpc/react-query";
 import { createTRPCMsw } from "msw-trpc";
 import { type ReactElement } from "react";
 import superjson from "superjson";
-import { type AppRouter } from "~/server/api/root";
+import { type AppRouter } from "~/server/api/router";
 import "@testing-library/jest-dom";
 import fetch from "cross-fetch";
 
