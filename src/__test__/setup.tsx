@@ -19,11 +19,9 @@ const mockedTRPC = createTRPCReact<AppRouter>({
   },
 });
 
-global.fetch = fetch;
-
 const mockedTRPCClient = mockedTRPC.createClient({
   transformer: superjson,
-  links: [httpLink({ url: "http://localhost:3000/api/trpc" })],
+  links: [httpLink({ url: "http://localhost:3000/api/trpc", fetch })],
 });
 
 const mockedQueryClient = new QueryClient();
